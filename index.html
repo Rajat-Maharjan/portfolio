@@ -2,269 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rajat Maharjan | IT Support Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rajat Maharjan | Digital Portfolio</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
+    html { scroll-behavior: smooth; }
 
-    body {
-      background: #f8fafc;
-      color: #1e293b;
-      line-height: 1.6;
-    }
+    body { background: #f8fafc; color: #1e293b; }
 
     header {
-      background: linear-gradient(135deg, #0f172a, #2563eb);
+      background: linear-gradient(135deg, #020617, #1d4ed8, #2563eb);
       color: white;
-      padding: 90px 10%;
-      text-align: center;
+      min-height: 100vh;
     }
 
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 10%;
+      align-items: center;
     }
 
-    header h2 {
-      font-size: 22px;
-      font-weight: 400;
-      color: #dbeafe;
-      margin-bottom: 20px;
-    }
+    .logo { font-size: 22px; font-weight: bold; }
 
-    header p {
-      max-width: 700px;
-      margin: auto;
-      color: #e0f2fe;
-    }
+    .nav-links { list-style: none; display: flex; gap: 20px; }
+    .nav-links a { color: white; text-decoration: none; font-weight: 500; }
+
+    .hero { text-align: center; padding: 150px 10%; }
+    .hero h1 { font-size: 48px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; margin-bottom: 25px; }
 
     .btn {
-      display: inline-block;
-      margin-top: 25px;
+      background: #3b82f6;
+      color: white;
       padding: 12px 24px;
-      background: white;
-      color: #2563eb;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
+      transition: 0.3s;
     }
 
-    section {
-      padding: 60px 10%;
+    .btn:hover { background: #1d4ed8; }
+
+    .section { padding: 70px 10%; text-align: center; }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
     }
 
-    .section-title {
-      font-size: 30px;
-      margin-bottom: 25px;
-      color: #0f172a;
-      border-left: 5px solid #2563eb;
-      padding-left: 12px;
-    }
-
-    .card {
+    .skills-container span {
       background: white;
-      padding: 28px;
-      border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      margin-bottom: 25px;
+      padding: 10px 16px;
+      border-radius: 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     }
 
-    .skills {
+    .projects-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
-    .skill-box {
-      background: #eff6ff;
+    .project-card {
+      background: white;
       padding: 20px;
-      border-radius: 14px;
-    }
-
-    .skill-box h3 {
-      margin-bottom: 10px;
-      color: #1d4ed8;
-    }
-
-    .project-images {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .project-images img {
-      width: 100%;
-      border-radius: 14px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    }
-
-    .contact-info p {
-      margin-bottom: 8px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     footer {
+      background: #020617;
+      color: white;
       text-align: center;
-      padding: 25px;
-      background: #0f172a;
-      color: #cbd5e1;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 36px;
-      }
-
-      section {
-        padding: 45px 6%;
-      }
+      padding: 15px;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Rajat Maharjan</h1>
-    <h2>IT Support Technician | Aspiring Service Desk Analyst</h2>
-    <p>
-      Entry-level IT professional with a Bachelor of Information Technology and hands-on
-      practice in Windows troubleshooting, ticket documentation, Microsoft 365 support,
-      and customer-focused technical support.
-    </p>
-    <a href="Rajat-Maharjan-Resume.pdf" class="btn" download>Download Resume</a>
-  </header>
+<header>
+  <nav class="navbar">
+    <h2 class="logo">Rajat Maharjan</h2>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <section>
-    <h2 class="section-title">About Me</h2>
-    <div class="card">
+  <div class="hero">
+    <h1>Hello, I’m Rajat</h1>
+    <p>IT Support | Web Development | Cloud & Networking</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+</header>
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    IT graduate with strong foundations in web development, cloud computing, and IT support.
+    Skilled in troubleshooting, networking fundamentals, and building responsive web applications.
+  </p>
+</section>
+
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+    <span>Azure</span><span>Networking</span><span>DNS</span>
+    <span>DHCP</span><span>TCP/IP</span><span>Windows</span>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <h3>Rawzat Cafe Website</h3>
       <p>
-        I am an entry-level IT Support Technician based in Newcastle, NSW. I have a Bachelor
-        of Information Technology and practical experience supporting customers with device
-        setup, troubleshooting, connectivity issues, and technical problem-solving.
+        Designed and developed a responsive website for a cafe business to improve
+        online presence and customer engagement.
       </p>
-      <br>
+      <ul>
+        <li>Built using HTML & CSS</li>
+        <li>Mobile responsive design</li>
+        <li>Clean navigation structure</li>
+      </ul>
+      <a href="#projects" class="btn">Learn More</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Cloud Migration Strategy (Azure)</h3>
       <p>
-        I am currently looking for Level 1 Service Desk, Help Desk, or Junior IT Support roles
-        where I can apply my technical knowledge, communication skills, and willingness to learn.
+        Planned a cloud migration solution focusing on scalability, security,
+        and cost optimization.
       </p>
+      <ul>
+        <li>Compared on-premise vs cloud</li>
+        <li>Identified risks and solutions</li>
+        <li>Designed migration approach</li>
+      </ul>
+      <a href="#projects" class="btn">Learn More</a>
     </div>
-  </section>
 
-  <section>
-    <h2 class="section-title">Technical Skills</h2>
-
-    <div class="skills">
-      <div class="skill-box">
-        <h3>Operating Systems</h3>
-        <p>Windows 10, Windows 11, macOS basic, iOS basic</p>
-      </div>
-
-      <div class="skill-box">
-        <h3>IT Support</h3>
-        <p>Troubleshooting, ticket logging, device setup, remote support basics</p>
-      </div>
-
-      <div class="skill-box">
-        <h3>Networking</h3>
-        <p>TCP/IP, DNS, DHCP, IP addressing, Wi-Fi troubleshooting</p>
-      </div>
-
-      <div class="skill-box">
-        <h3>Microsoft Tools</h3>
-        <p>Microsoft 365, Outlook, Teams, basic Azure AD / Entra ID</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Featured Project</h2>
-
-    <div class="card">
-      <h3>IT Support Ticketing & Troubleshooting Lab</h3>
-      <br>
-
+    <div class="project-card">
+      <h3>IT Support Troubleshooting Guide</h3>
       <p>
-        This project simulates real-world Level 1 IT support operations. I created and managed
-        support tickets involving common issues such as password reset, Wi-Fi connectivity,
-        printer problems, Outlook errors, and slow computer performance.
+        Created a guide for diagnosing and resolving common IT support issues.
       </p>
-
-      <br>
-
-      <p>
-        Each issue was analysed, prioritised, and documented with troubleshooting steps and
-        final resolutions, following a structured IT support workflow.
-      </p>
-
-      <br>
-
-      <p><strong>Tools Used:</strong> Windows 10/11, Network Settings, Printer Settings, Task Manager, Microsoft Outlook</p>
-      <p><strong>Skills Demonstrated:</strong> Ticket management, troubleshooting, customer support, technical documentation</p>
-
-      <div class="project-images">
-        <img src="images/ticket-log.png" alt="IT support ticket log screenshot">
-        <img src="images/password-settings.png" alt="Windows sign in options screenshot">
-        <img src="images/wifi-settings.png" alt="Wi-Fi settings screenshot">
-        <img src="images/printer-settings.png" alt="Printer settings screenshot">
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Experience</h2>
-
-    <div class="card">
-      <h3>Mobile Device Technician & Sales Assistant</h3>
-      <p><strong>Mobile Experts | Jul 2023 – May 2025</strong></p>
-      <p>
-        Diagnosed mobile device issues, assisted customers with device setup, resolved basic
-        hardware/software problems, and provided clear technical support to non-technical users.
-      </p>
+      <ul>
+        <li>Covered DNS, DHCP, TCP/IP</li>
+        <li>Step-by-step troubleshooting</li>
+        <li>Real-world IT scenarios</li>
+      </ul>
+      <a href="#projects" class="btn">Learn More</a>
     </div>
 
-    <div class="card">
-      <h3>Customer Service Team Member — POS & Systems Support</h3>
-      <p><strong>Spotlight Retail Group | Feb 2023 – Aug 2024</strong></p>
-      <p>
-        Supported POS operations, resolved login and scanner-related issues, assisted with
-        system troubleshooting, and escalated unresolved technical issues when required.
-      </p>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2 class="section-title">Education & Certifications</h2>
+<section id="resume" class="section">
+  <h2>Resume</h2>
+  <a href="Rajat-Maharjan-Resume.pdf" class="btn">Download Resume</a>
+</section>
 
-    <div class="card">
-      <p><strong>Bachelor of Information Technology</strong></p>
-      <p>King’s Own Institute, Sydney, Australia | Jul 2022 – Feb 2025</p>
-      <br>
-      <p><strong>Planned Certifications:</strong> CompTIA A+, Microsoft 365 Fundamentals MS-900</p>
-    </div>
-  </section>
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: rawzatmhzn@gmail.com</p>
+  <p>GitHub: <a href="https://github.com/rajat-maharjan" target="_blank">github.com/rajat-maharjan</a></p>
+  <p>Portfolio: <a href="https://rajat-maharjan.github.io/portfolio/" target="_blank">View Live Site</a></p>
+</section>
 
-  <section>
-    <h2 class="section-title">Contact</h2>
-
-    <div class="card contact-info">
-      <p><strong>Email:</strong> rawzatmhzn@gmail.com</p>
-      <p><strong>Phone:</strong> 0415 541 006</p>
-      <p><strong>Location:</strong> Newcastle, NSW, Australia</p>
-      <p><strong>LinkedIn:</strong> linkedin.com/in/rajat-maharjan</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Rajat Maharjan | IT Support Portfolio</p>
-  </footer>
+<footer>
+  <p>© 2026 Rajat Maharjan</p>
+</footer>
 
 </body>
 </html>
